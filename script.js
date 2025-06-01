@@ -74,8 +74,8 @@ function addHideWarningClass(){
 function verifyLocalStorageItems(){
     const verifyLocalStorageItems = localStorage.getItem("items")
 
-    if(localStorage){
-        items = JSON.parse(localStorage.getItem("items"))
+    if(verifyLocalStorageItems === null || verifyLocalStorageItems === ""){
+        items = []
         showItemsList()
     }
     
